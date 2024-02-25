@@ -1,0 +1,21 @@
+{
+  "name": "Nomi Group Chat",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["injected.css"],
+      "run_at": "document_start",
+      "matches": ["*://*.beta.nomi.ai/*"]
+    }
+  ],
+  "host_permissions": ["*://*.beta.nomi.ai/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js", "injected.css"],
+      "matches": ["*://*.beta.nomi.ai/*"]
+    }
+  ]
+}
