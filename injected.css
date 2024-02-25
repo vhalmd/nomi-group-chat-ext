@@ -1,0 +1,28 @@
+button:has(> div):focus-within,
+button:has(> div):hover {
+  outline: 5px solid rgb(150, 16, 255) !important;
+  border-radius: 50%;
+}
+
+.btn-random-response {
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+}
+
+.btn-random-response:hover,
+.btn-random-response:focus-within {
+  outline: 5px solid rgb(150, 16, 255) !important;
+}
+
+.btn-random-response > svg {
+  height: 45px;
+  width: 45px;
+  color: aliceblue;
+}
+
+.btn-random-response:hover > svg,
+.btn-random-response:focus-within > svg {
+  color: rgb(150, 16, 255);
+  cursor: pointer;
+}
