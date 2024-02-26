@@ -1,28 +1,31 @@
-button:has(> div):focus-within,
-button:has(> div):hover {
+button:not([aria-haspopup]):has(> div):focus-within,
+button:not([aria-haspopup]):has(> div):hover {
   outline: 5px solid rgb(150, 16, 255) !important;
   border-radius: 50%;
 }
 
-.btn-random-response {
+.btn-random-response,
+.btn-auto-toggle {
   background: transparent;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 }
 
-.btn-random-response:hover,
-.btn-random-response:focus-within {
-  outline: 5px solid rgb(150, 16, 255) !important;
-}
-
-.btn-random-response > svg {
+.btn-random-response > svg,
+.btn-auto-toggle > svg {
   height: 45px;
   width: 45px;
   color: aliceblue;
 }
 
 .btn-random-response:hover > svg,
-.btn-random-response:focus-within > svg {
+.btn-random-response:focus-within > svg,
+.btn-auto-toggle:hover > svg,
+.btn-auto-toggle:focus-within > svg {
   color: rgb(150, 16, 255);
-  cursor: pointer;
+}
+
+.btn-auto-toggle[data-toggled] > svg {
+  color: rgb(150, 16, 255) !important;
 }
